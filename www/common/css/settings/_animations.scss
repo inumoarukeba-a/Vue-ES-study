@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/* ストロークアニメーション
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin strokeSvg() {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0.3;
+  stroke-dasharray: 150% 150%;
+  opacity: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+@keyframes strokeSvg {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 150%;
+    fill-opacity: 0;
+  }
+  61.8% {
+    opacity: 1;
+    stroke-dashoffset: 0%;
+    fill-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0%;
+    fill-opacity: 1;
+  }
+}
+
+/* フェードイン
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin fadeIn($duration: 0.3s, $delay: 0s, $easing: $easeOutQuad) {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: $easing;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  @at-root .pace-done .-inViewActive & {
+    opacity: 1;
+  }
+}
+
+/* スライドイン
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin slideIn(
+  $Y: 0,
+  $X: 0,
+  $duration: 0.3s,
+  $delay: 0s,
+  $easing: $easeOutQuad,
+  $origin: left top
+) {
+  transform: translateY($Y) translateX($X);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-timing-function: $easing;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  @at-root .pace-done .-inViewActive #{&} {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+/* スケールイン
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin scaleIn(
+  $X: 1,
+  $Y: 1,
+  $duration: 0.3s,
+  $delay: 0s,
+  $easing: $easeOutQuad,
+  $origin: left top
+) {
+  transform: scaleX($X) scaleY($Y);
+  transition-property: transform;
+  transition-timing-function: $easing;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  transform-origin: $origin;
+  @at-root .pace-done .-inViewActive #{&} {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+/* ブラーイン
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin blurIn($blur: 8px, $duration: 0.3s, $delay: 0s, $easing: $easeOutQuad) {
+  filter: blur($blur);
+  opacity: 0;
+  transition-property: filter, opacity;
+  transition-timing-function: $easing;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  will-change: filter, opacity;
+  @at-root .pace-done .-inViewActive #{&} {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* バウンスイン
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.618, 1.618);
+  }
+  5% {
+    transform: scale(0.618, 0.618);
+  }
+  10% {
+    transform: scale(1.382, 1.382);
+  }
+  15% {
+    transform: scale(0.8, 0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1618, 1.1618);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* グラデーション
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
