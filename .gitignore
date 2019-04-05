@@ -11,6 +11,8 @@
 # ドットはじまり
 \!*
 .*
+!.prettierrc
+!.stylelint
 !.htaccess
 !.htpasswd
 !.gitkeep
@@ -30,9 +32,6 @@ bundle.js
 #gulp
 .babelrc
 .image-cache
-gulpfile.babel.js
-package.json
-package-lock.json
 fractal.js
 fractal_src/*
 component_lib/*
