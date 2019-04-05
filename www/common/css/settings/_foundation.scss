@@ -175,9 +175,9 @@ html {
     font-size: (625% * (strip-unit($max-basis) / strip-unit($pc-basis)));
   }
 }
+
 body {
   font-family: $font-sans-serif;
-  font-size: percentage(strip-unit($base-font-size) * 0.1);
   line-height: $base-line-height;
   -webkit-text-size-adjust: 100%;
   @include mq-pc {

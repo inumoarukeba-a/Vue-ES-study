@@ -1,36 +1,5 @@
 @charset "UTF-8";
 
-/* ストロークアニメーション
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
-@mixin strokeSvg() {
-  fill: currentColor;
-  stroke: currentColor;
-  stroke-width: 0.3;
-  stroke-dasharray: 150% 150%;
-  opacity: 0;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-@keyframes strokeSvg {
-  0% {
-    opacity: 0;
-    stroke-dashoffset: 150%;
-    fill-opacity: 0;
-  }
-  61.8% {
-    opacity: 1;
-    stroke-dashoffset: 0%;
-    fill-opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    stroke-dashoffset: 0%;
-    fill-opacity: 1;
-  }
-}
-
 /* フェードイン
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
 @mixin fadeIn($duration: 0.3s, $delay: 0s, $easing: $easeOutQuad) {
@@ -102,7 +71,36 @@
     opacity: 1;
   }
 }
+/* ストロークアニメーション
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin strokeSvg() {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0.3;
+  stroke-dasharray: 150% 150%;
+  opacity: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
 
+@keyframes strokeSvg {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 150%;
+    fill-opacity: 0;
+  }
+  61.8% {
+    opacity: 1;
+    stroke-dashoffset: 0%;
+    fill-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0%;
+    fill-opacity: 1;
+  }
+}
 /* バウンスイン
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
 @keyframes bounceIn {
@@ -133,9 +131,9 @@
   }
 }
 
-/* グラデーション
+/* 背景アニメーション
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
-@keyframes moveGradient {
+@keyframes moveBackground {
   0% {
     background-position: 0% 50%;
   }

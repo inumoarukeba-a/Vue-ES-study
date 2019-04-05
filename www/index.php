@@ -39,6 +39,8 @@
         </p>
       </section>
 
+      <?php /* test
+      −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */ ?>
       <section class="test">
         <ul class="test__list">
           <li class="test__item">
@@ -56,6 +58,8 @@
         </ul>
       </section>
 
+      <?php /* test
+      −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */ ?>
       <section class="test">
         <section class="test__section">
           高さ150px固定<br>
@@ -72,6 +76,8 @@
         </section>
       </section>
 
+      <?php /* test
+      −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */ ?>
       <section class="test">
         <header class="test__header">
           使い方
@@ -112,9 +118,9 @@
 
     </div>
 
-    <script src="js/library/pace/pace.min.js"></script>
-    <script src="js/library/lazysizes/lazysizes.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/library/pace/pace.min.js" defer></script>
+    <script src="js/library/lazysizes/lazysizes.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 
   </body>
 </html>
