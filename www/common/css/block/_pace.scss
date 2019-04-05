@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.pace {
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.5s $easeOutQuad;
+}
+
+.pace-inactive {
+  opacity: 0;
+}
+
+.pace .pace-progress {
+  @include mq-pc {
+    background: $color-accent;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    transition: transform 0.2s $easeOutQuad;
+  }
+}
+
+.pace .pace-activity {
+  @include mq-sp {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 5vw;
+    right: 5vw;
+    width: 4vw;
+    height: 4vw;
+    border: solid 1px transparent;
+    border-top-color: $color-accent;
+    border-left-color: $color-accent;
+    border-radius: 50%;
+    animation: pace-spinner 0.3s linear infinite;
+  }
+}
+
+@keyframes pace-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "name": "GulpTask",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.24.7",
+    "gulp": "^4.0.0",
+    "gulp-asset-cache": "^1.1.5",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "8.0.0-beta.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-image": "^4.2.0",
+    "gulp-progeny": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JYoshida0809/gulp.git"
+  },
+  "author": "J.Yoshida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JYoshida0809/gulp/issues"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  }
+}
