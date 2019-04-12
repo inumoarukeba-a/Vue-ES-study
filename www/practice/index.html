@@ -11,7 +11,9 @@
   </head>
   <body ontouchstart="">
     <div class="app">
-      {{ message }}
+      <ol>
+        <li v-for="item in list">{{ item }}</li>
+      </ol>
     </div>
 
     <script src="../js/library/pace/pace.min.js" defer></script>

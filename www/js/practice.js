@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var e=new Vue({el:".app",data:{message:"Hello Vue.hs!"}});console.log(e.message)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:".app",data:{list:["りんご","ここあ","グリーンバナナ粉"]}})});
