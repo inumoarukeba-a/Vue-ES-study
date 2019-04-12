@@ -4,13 +4,24 @@
   pointer-events: none;
   user-select: none;
   transition: opacity 0.5s $easeOutQuad;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    pointer-events: auto;
+    transition: opacity 0.3s $easeOutQuad;
+    @at-root .pace-done & {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
-.pace-inactive {
-  opacity: 0;
-}
-
-.pace .pace-progress {
+.pace-progress {
   @include mq-pc {
     background: $color-accent;
     position: fixed;
@@ -20,10 +31,13 @@
     width: 100%;
     height: 2px;
     transition: transform 0.2s $easeOutQuad;
+    @at-root .pace-done & {
+      opacity: 0;
+    }
   }
 }
 
-.pace .pace-activity {
+.pace-activity {
   @include mq-sp {
     display: block;
     position: fixed;
@@ -36,7 +50,10 @@
     border-top-color: $color-accent;
     border-left-color: $color-accent;
     border-radius: 50%;
-    animation: pace-spinner 0.3s linear infinite;
+    animation: pace-spinner 0.3s $easeOutQuad infinite;
+    @at-root .pace-done & {
+      opacity: 0;
+    }
   }
 }
 

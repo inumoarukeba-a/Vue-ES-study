@@ -180,11 +180,11 @@ body {
   font-family: $font-sans-serif;
   line-height: $base-line-height;
   -webkit-text-size-adjust: 100%;
-  @include mq-pc {
-    font-size: 62.5%;
+  @include mq-sp {
+    font-size: vw(strip-unit($base-font-size));
   }
-  @include mq-max {
-    font-size: (62.5% * (strip-unit($max-basis) / strip-unit($pc-basis)));
+  @include mq-pc {
+    font-size: responsive(strip-unit($base-font-size));
   }
 }
 
