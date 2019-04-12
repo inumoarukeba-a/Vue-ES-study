@@ -2,7 +2,7 @@
 
 /* フェードイン
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
-@mixin fadeIn($duration: 0.3s, $delay: 0s, $easing: $easeOutQuad) {
+@mixin fadeIn($duration: 0.3s, $delay: 0s, $easing: $easing) {
   opacity: 0;
   transition-property: opacity;
   transition-timing-function: $easing;
@@ -20,7 +20,7 @@
   $X: 0,
   $duration: 0.3s,
   $delay: 0s,
-  $easing: $easeOutQuad,
+  $easing: $easing,
   $origin: left top
 ) {
   transform: translateY($Y) translateX($X);
@@ -42,7 +42,7 @@
   $Y: 1,
   $duration: 0.3s,
   $delay: 0s,
-  $easing: $easeOutQuad,
+  $easing: $easing,
   $origin: left top
 ) {
   transform: scaleX($X) scaleY($Y);
@@ -58,7 +58,7 @@
 
 /* ブラーイン
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
-@mixin blurIn($blur: 8px, $duration: 0.3s, $delay: 0s, $easing: $easeOutQuad) {
+@mixin blurIn($blur: 8px, $duration: 0.3s, $delay: 0s, $easing: $easing) {
   filter: blur($blur);
   opacity: 0;
   transition-property: filter, opacity;

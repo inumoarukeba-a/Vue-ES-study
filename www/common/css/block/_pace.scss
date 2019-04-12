@@ -3,7 +3,7 @@
 .pace {
   pointer-events: none;
   user-select: none;
-  transition: opacity 0.5s $easeOutQuad;
+  transition: opacity 0.5s $easing;
   &:before {
     content: '';
     width: 100%;
@@ -13,7 +13,7 @@
     top: 0;
     background-color: #fff;
     pointer-events: auto;
-    transition: opacity 0.3s $easeOutQuad;
+    transition: opacity 0.3s $easing;
     @at-root .pace-done & {
       opacity: 0;
       pointer-events: none;
@@ -30,7 +30,7 @@
     right: 100%;
     width: 100%;
     height: 2px;
-    transition: transform 0.2s $easeOutQuad;
+    transition: transform 0.2s $easing;
     @at-root .pace-done & {
       opacity: 0;
     }
@@ -50,7 +50,7 @@
     border-top-color: $color-accent;
     border-left-color: $color-accent;
     border-radius: 50%;
-    animation: pace-spinner 0.3s $easeOutQuad infinite;
+    animation: pace-spinner 0.3s $easing infinite;
     @at-root .pace-done & {
       opacity: 0;
     }

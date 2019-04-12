@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '.app',
     data: {
+      show: true,
       message: 'hello vue js !',
       count: '初期メッセージ',
       list: ['りんご', 'ここあ', 'グリーンバナナ粉'],

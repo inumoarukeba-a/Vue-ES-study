@@ -11,19 +11,30 @@
   </head>
   <body ontouchstart="">
     <div class="app">
-      <p>{{ message }}</p>
-      <input v-model="message" />
-      <p>{{ count }}</p>
-      <input v-model.number="count" />
-      <ol>
-        <li v-for="item in list">{{ item }}</li>
-      </ol>
-      <button v-on:click="handleClick">Click me!</button>
+      <div v-if="show">
+        <p>{{ message }}</p>
+        <input v-model="message" />
+        <p>{{ count }}</p>
+        <input v-model.number="count" />
+        <ol>
+          <li v-for="item in list">{{ item }}</li>
+        </ol>
+        <button v-on:click="handleClick">Click me!</button>
+      </div>
+      <button v-on:click="show=!show">切り替え</button>
+      <transition>
+        <p v-if="show">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae hic
+          eaque accusamus fuga maiores, iste nobis. Ad ullam obcaecati natus,
+          consequatur incidunt, nulla minus, dolor sapiente quis repellendus
+          quos voluptas.
+        </p>
+      </transition>
     </div>
 
-    <script src="../js/library/pace/pace.min.js" defer></script>
-    <script src="../js/library/lazysizes/lazysizes.min.js" defer></script>
-    <script src="//cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" defer></script>
-    <script src="../js/practice.js" defer></script>
+    <script src="../js/library/pace/pace.min.js"></script>
+    <script src="../js/library/lazysizes/lazysizes.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="../js/practice.js"></script>
   </body>
 </html>
