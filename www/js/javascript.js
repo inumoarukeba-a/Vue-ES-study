@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){alert(5+2)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var t=function(t){return t+t*(1<arguments.length&&void 0!==arguments[1]?arguments[1]:.08)},e=t(100);alert(e);var n=t(100,.1);alert(n)});
