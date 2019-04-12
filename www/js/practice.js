@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=new Vue({el:".app",data:{message:"Hello Vue.hs!"}});console.log(e.message)});
