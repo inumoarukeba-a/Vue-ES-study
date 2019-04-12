@@ -3,17 +3,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   /**
    * 税込みの値段を返す関数
-   * @param price 価格
-   * @param tax 税率
+   * @param prices 価格
+   * @returs {number}
    */
-  const calcFunction = (price, tax = 0.08) => {
-    const result = price + price * tax
+  const calcSum = (...prices) => {
+    let result = 0
+    for (const value of prices) {
+      result += value
+    }
     return result
   }
 
-  const result1 = calcFunction(100)
-  alert(result1)
-
-  const result2 = calcFunction(100, 0.1)
-  alert(result2)
+  alert(calcSum(10, 20))
+  alert(calcSum(10, 10, 10, 10, 10, 10, 10, 10))
 })
