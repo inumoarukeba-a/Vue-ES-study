@@ -11,9 +11,14 @@
   </head>
   <body ontouchstart="">
     <div class="app">
+      <p>{{ message }}</p>
+      <input v-model="message" />
+      <p>{{ count }}</p>
+      <input v-model.number="count" />
       <ol>
         <li v-for="item in list">{{ item }}</li>
       </ol>
+      <button v-on:click="handleClick">Click me!</button>
     </div>
 
     <script src="../js/library/pace/pace.min.js" defer></script>
