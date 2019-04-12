@@ -1,11 +1,10 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const myFunction = (a, b) => {
-    if (a >= 100) {
-      return a
-    }
-    return b
+  const calcFunction = (price, tax) => {
+    const result = price + price * tax
+    return result
   }
-  alert(myFunction(50))
+  const myResult = calcFunction(100, 0.8)
+  alert(myResult)
 })
