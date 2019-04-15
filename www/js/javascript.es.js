@@ -1,11 +1,16 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  for (let index = 0; index < 10; index++) {
-    if (index % 2 === 0) {
-      continue
+  const myFunction = flgA => {
+    for (let index = 0; index < 10; index++) {
+      if (flgA === false) {
+        continue
+      }
+      if (index % 2 === 0) {
+        continue
+      }
+      console.log(index)
     }
-    console.log(index)
   }
-  console.log('ループ終了')
+  myFunction(true)
 })
