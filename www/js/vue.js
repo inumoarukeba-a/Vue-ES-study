@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:".app",data:{show:!0,message:"hello vue js !",count:"初期メッセージ",list:["りんご","ここあ","グリーンバナナ粉"]},methods:{handleClick:function(e){alert(e.target)}}})});
+"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:".app",data:{message:{value:"Hello verogpue.js!"},list:["りんご","ばなな","いちご"],num:1}})});
