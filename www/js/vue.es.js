@@ -2,13 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    el: '.app',
+    el: '#app',
     data: {
-      message: {
-        value: 'Hello verogpue.js!',
+      count: 0,
+    },
+    methods: {
+      increment: function() {
+        this.count += 1
       },
-      list: ['りんご', 'ばなな', 'いちご'],
-      num: 1,
     },
   })
 })

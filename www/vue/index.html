@@ -10,11 +10,9 @@
     <link href="../common/css/common.css" rel="stylesheet" />
   </head>
   <body ontouchstart="">
-    <div class="app">
-      <p>{{ message.value }}</p>
-      <p>{{ message.value.length }}</p>
-      <p>{{ list[0] }}</p>
-      <p>{{ list[num] }}</p>
+    <div id="app">
+      <p>{{ count }}回クリック</p>
+      <button v-on:click="increment">カウント++</button>
     </div>
 
     <script src="../js/library/pace/pace.min.js"></script>

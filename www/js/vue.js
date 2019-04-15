@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:".app",data:{message:{value:"Hello verogpue.js!"},list:["りんご","ばなな","いちご"],num:1}})});
+"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:"#app",data:{count:0},methods:{increment:function(){this.count+=1}}})});
