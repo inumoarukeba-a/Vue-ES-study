@@ -1,13 +1,15 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const myPrice = 39
+  if (true) {
+    alert('hi')
+  }
 
-  if (myPrice >= 50) {
-    alert('50以上')
-  } else if (myPrice >= 10) {
-    alert('10以上50未満')
+  const randomNum = Math.random() * 10
+
+  if (randomNum >= 5) {
+    alert('5以上')
   } else {
-    alert('10未満')
+    alert('5未満')
   }
 })
