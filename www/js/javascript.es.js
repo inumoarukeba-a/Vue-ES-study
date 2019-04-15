@@ -1,7 +1,9 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  for (let index = 0; index < 10; index++) {
-    console.log(index)
+  let myNumber = 0
+  while (myNumber < 10) {
+    console.log(myNumber)
+    myNumber += 1
   }
 })
