@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){alert("mikan")});
+"use strict";document.addEventListener("DOMContentLoaded",function(){for(var e=0;e<10;e++)console.log(e)});
