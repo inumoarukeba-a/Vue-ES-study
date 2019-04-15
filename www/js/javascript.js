@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){alert("hi"),5<=10*Math.random()?alert("5以上"):alert("5未満")});
+"use strict";document.addEventListener("DOMContentLoaded",function(){alert("mikan")});
