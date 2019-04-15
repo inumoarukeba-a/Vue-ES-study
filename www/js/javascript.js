@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){for(var e=0;e<10;)console.log(e),e+=1});
+"use strict";document.addEventListener("DOMContentLoaded",function(){for(var o=0;o<10;o++)o%2!=0&&console.log(o);console.log("ループ終了")});
