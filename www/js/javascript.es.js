@@ -1,19 +1,13 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  /**
-   * 税込みの値段を返す関数
-   * @param prices 価格
-   * @returs {number}
-   */
-  const calcSum = (...prices) => {
-    let result = 0
-    for (const value of prices) {
-      result += value
-    }
-    return result
-  }
+  const myPrice = 39
 
-  alert(calcSum(10, 20))
-  alert(calcSum(10, 10, 10, 10, 10, 10, 10, 10))
+  if (myPrice >= 50) {
+    alert('50以上')
+  } else if (myPrice >= 10) {
+    alert('10以上50未満')
+  } else {
+    alert('10未満')
+  }
 })
