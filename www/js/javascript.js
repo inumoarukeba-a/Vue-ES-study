@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var e="Javascript".includes("a");console.log(e)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var o=document.querySelector(".rectangle");document.querySelector(".button").addEventListener("click",function(){var t=Math.trunc(360*Math.random()),e="hsl(".concat(t,", 100%, 50%)"),n="hsl(".concat(t+40,", 100%, 50%)");o.style.setProperty("--start",e),o.style.setProperty("--end",n),console.log(e),console.log(n)})});
