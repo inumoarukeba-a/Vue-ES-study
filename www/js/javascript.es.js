@@ -1,9 +1,13 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const a = 10
-  const b = 20
+  const userName = '鈴木'
+  if (userName) {
+    alert('こんにちは${userName}さん')
+  }
 
-  console.log(a < b)
-  console.log(a > b)
+  const address = ''
+  if (address) {
+    alert('あなたは${userName}に住んでいますね？')
+  }
 })
