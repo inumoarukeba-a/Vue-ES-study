@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){alert("こんにちは${userName}さん")});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e="Javascript".includes("a");console.log(e)});
