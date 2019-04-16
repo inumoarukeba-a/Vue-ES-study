@@ -8,7 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       increment: function() {
-        this.count += 1
+        var vm = this
+        setTimeout(function() {
+          vm.count++
+        }, 100)
+        setTimeout(
+          function() {
+            this.count++
+          }.bind(this),
+          100
+        )
+        setTimeout(() => {
+          this.count++
+        }, 100)
+        setTimeout(this.callback, 100)
       },
     },
   })
