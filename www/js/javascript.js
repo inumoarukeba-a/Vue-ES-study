@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){!function(n){for(var o=0;o<10;o++)!1!==n&&o%2!=0&&console.log(o)}(!0)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){console.log(!0),console.log(!1)});
