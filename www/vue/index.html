@@ -11,8 +11,8 @@
   </head>
   <body ontouchstart="">
     <div id="app">
-      <p>{{ count }}回クリック</p>
-      <button v-on:click="increment">カウント++</button>
+      <p v-vind:class="{ child: isChild, 'is-active': isActive }">Text</p>
+      <p v-bind:style="{ color: textColor, backgroundColor: BgColor }">Text</p>
     </div>
 
     <script src="../js/library/pace/pace.min.js"></script>

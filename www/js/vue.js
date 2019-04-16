@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:"#app",data:{count:0},methods:{increment:function(){var t=this,n=this;setTimeout(function(){n.count++},100),setTimeout(function(){this.count++}.bind(this),100),setTimeout(function(){t.count++},100),setTimeout(this.callback,100)}}})});
+"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:"#app",data:{isChild:!0,isActive:!0,textColor:"red",bgColor:"lightgray"}})});
