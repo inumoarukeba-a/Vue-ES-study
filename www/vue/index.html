@@ -11,8 +11,15 @@
   </head>
   <body ontouchstart="">
     <div id="app">
-      <p v-if="ok">v-if条件による描画</p>
-      <p v-show="ok">v-show条件による表示</p>
+      <div v-if="type === 'A'">
+        A
+      </div>
+      <div v-else-if="type === 'B'">
+        B
+      </div>
+      <div v-else>
+        すべての条件を満たさなかった
+      </div>
     </div>
 
     <script src="../js/library/pace/pace.min.js"></script>
