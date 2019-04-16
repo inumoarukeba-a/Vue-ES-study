@@ -11,14 +11,11 @@
   </head>
   <body ontouchstart="">
     <div id="app">
-      <div v-if="type === 'A'">
-        A
+      <div v-if="loaded" key="content-visible">
+        content
       </div>
-      <div v-else-if="type === 'B'">
-        B
-      </div>
-      <div v-else>
-        すべての条件を満たさなかった
+      <div v-else key="content-loading">
+        loading now...
       </div>
     </div>
 
