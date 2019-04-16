@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:"#app",data:{radius:50}})});
+"use strict";document.addEventListener("DOMContentLoaded",function(){new Vue({el:"#app",data:{ok:!1}})});
