@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var o=crypto.getRandomValues(new Uint16Array(10));console.log(o),console.log(o.join("")),o.join(""),console.log(crypto.getRandomValues(new Uint32Array(10)).join(""))});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var o=0,r=document.querySelector(".aiueo");!function t(){var n=o*Math.PI/180;var e=window.innerWidth/2+100*Math.cos(n)-50;var a=window.innerHeight/2+100*Math.sin(n)-50;r.style.transform="translate(".concat(e,"px,").concat(a,"px)");o+=1;requestAnimationFrame(t)}()});
