@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#app',
     data: {
+      text: 'Vue',
       list: [
         { id: 1, name: 'スライム', hp: 100 },
         { id: 2, name: 'ゴブリン', hp: 200 },
