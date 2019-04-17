@@ -11,12 +11,11 @@
   </head>
   <body ontouchstart="">
     <div id="app">
-      <div v-if="loaded" key="content-visible">
-        content
-      </div>
-      <div v-else key="content-loading">
-        loading now...
-      </div>
+      <ul>
+        <li v-for="item in list" v-bind:key="item.id">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
+      </ul>
     </div>
 
     <script src="../js/library/pace/pace.min.js"></script>

@@ -1,18 +1,10 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const rectangle = document.querySelector('.rectangle')
+  const randomArray1 = crypto.getRandomValues(new Uint16Array(10))
+  console.log(randomArray1)
+  console.log(randomArray1.join(''))
+  randomArray1.join('')
 
-  document.querySelector('.button').addEventListener('click', onClickButton)
-
-  function onClickButton() {
-    const randomHue = Math.trunc(Math.random() * 360)
-    const randomColorStart = `hsl(${randomHue}, 100%, 50%)`
-    const randomColorEnd = `hsl(${randomHue + 40}, 100%, 50%)`
-
-    rectangle.style.setProperty('--start', randomColorStart)
-    rectangle.style.setProperty('--end', randomColorEnd)
-    console.log(randomColorStart)
-    console.log(randomColorEnd)
-  }
+  console.log(crypto.getRandomValues(new Uint32Array(10)).join(''))
 })
