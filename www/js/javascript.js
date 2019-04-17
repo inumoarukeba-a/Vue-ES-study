@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){console.log("ウェブデザイン".length),console.log("JavaScript".length)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var t=document.querySelector(".textarea"),n=document.querySelector(".string_num");t.addEventListener("keyup",function(){var e=t.value;n.innerText=e.length})});

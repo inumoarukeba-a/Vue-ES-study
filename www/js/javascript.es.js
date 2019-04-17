@@ -1,6 +1,10 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('ウェブデザイン'.length)
-  console.log('JavaScript'.length)
+  const textarea = document.querySelector('.textarea')
+  const string_num = document.querySelector('.string_num')
+  textarea.addEventListener('keyup', () => {
+    const inputText = textarea.value
+    string_num.innerText = inputText.length
+  })
 })
