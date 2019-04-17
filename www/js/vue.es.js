@@ -4,15 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#app',
     data: {
-      text: 'Vue',
-      list: [
-        { id: 1, name: 'スライム', hp: 100 },
-        { id: 2, name: 'ゴブリン', hp: 200 },
-        { id: 3, name: 'ドラゴン', hp: 500 },
-      ],
+      list: [],
+    },
+    created() {
+      axios
+        .get('/js/list.json')
+        .then(response => {
+          this.list = response.data
+        })
+        .catch(e => {
+          console.error(e)
+        })
     },
     methods: {
-      doAdd: function() {
+      doAdd() {
         var max = this.list.reduce(function(a, b) {
           return a > b.id ? a : b.id
         }, 0)
@@ -25,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       doRemove(index) {
         this.list.splice(index, 1)
       },
-      doAttack: function(index) {
+      doAttack(index) {
         this.list[index].hp -= 10 // HPを減らす
       },
     },
