@@ -21,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
           hp: 500,
         })
       },
+      doRemove(index) {
+        this.list.splice(index, 1)
+      },
+      doAttack: function(index) {
+        this.list[index].hp -= 10 // HPを減らす
+      },
     },
   })
 })
