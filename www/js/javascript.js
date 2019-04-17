@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var o=0,r=document.querySelector(".aiueo");!function t(){var n=o*Math.PI/180;var e=window.innerWidth/2+100*Math.cos(n)-50;var a=window.innerHeight/2+100*Math.sin(n)-50;r.style.transform="translate(".concat(e,"px,").concat(a,"px)");o+=1;requestAnimationFrame(t)}()});
+"use strict";document.addEventListener("DOMContentLoaded",function(){console.log("ウェブデザイン".length),console.log("JavaScript".length)});
