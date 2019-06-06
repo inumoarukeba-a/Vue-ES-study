@@ -1,0 +1,165 @@
+$key-color: #ff5252;
+$base-color: #fff;
+$contrast-color: #1a1a1a;
+$font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+$easing: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+.urlConversion {
+  *,
+  *:before,
+  *:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.urlConversion {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background: rgba($base-color, 0.95);
+  padding: 40px;
+  transition: transform 0.3s $easing 0s;
+  transform: translateY(-100%);
+  box-shadow: 0 0 40px rgba($contrast-color, 0.1618);
+  box-sizing: border-box;
+  font-family: $font-family;
+  &.-opened {
+    transform: translateY(0);
+  }
+}
+
+.urlConversion__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.urlConversion__list {
+  display: flex;
+  flex: 1;
+}
+
+.urlConversion__link {
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  border-radius: 3px;
+  line-height: 1;
+  border: 1px solid $key-color;
+  background: $key-color;
+  color: $base-color;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-family: $font-family;
+  font-weight: 400;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $base-color;
+  }
+  &:hover {
+    background: transparent;
+    color: $key-color;
+    box-shadow: 0 3px 5px rgba(darken($key-color, 38.2%), 0.1);
+    background: $base-color;
+    transform: translateY(-1px);
+  }
+  &:not(.-disabled) {
+    transition: background 0.3s $easing 0s, color 0.3s $easing 0s,
+      box-shadow 0.3s $easing 0s, transform 0.3s $easing 0s;
+  }
+  &.-disabled,
+  &:not([href]) {
+    border: 1px solid #eee;
+    background: #eee;
+    color: rgba($contrast-color, 0.382);
+    pointer-events: none;
+    cursor: default;
+  }
+  & + & {
+    margin-left: 12px;
+  }
+}
+
+.urlConversion__form {
+  position: relative;
+  flex: 1;
+}
+
+.urlConversion__label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  padding-left: 16px;
+  padding-right: 24px;
+  width: 100%;
+  transition: border 0.3s $easing 0s;
+  box-sizing: border-box;
+  position: relative;
+  &:before {
+    content: 'データが見つかりませんでした。正しいURLを入力してください。';
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    right: -1px;
+    bottom: 100%;
+    background: $key-color;
+    color: $base-color;
+    font-family: $font-family;
+    font-size: 12px;
+    line-height: 1;
+    height: 24px;
+    padding: 0 16px;
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s $easing 0s;
+  }
+  &.-error {
+    border-radius: 3px 0 3px 3px;
+    &:before {
+      opacity: 1;
+    }
+  }
+  &.-focus {
+    border-color: $key-color;
+  }
+}
+
+.urlConversion__caption {
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 1px solid #cfcfcf;
+  font-family: $font-family;
+  font-size: 12px;
+  transition: color 0.3s $easing 0s;
+  color: $contrast-color;
+}
+
+.urlConversion__input {
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  flex: 1;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+  }
+}
