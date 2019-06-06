@@ -22,3 +22,73 @@
     @content;
   }
 }
+
+/* Link
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin hover() {
+  @include mq-pc {
+    &:hover {
+      @content;
+    }
+  }
+  @include mq-sp {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin link {
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+/* Grid
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
+@mixin grid($options) {
+  // Gap
+  $gap-row: map-get($options, 'gap-row');
+  $gap-column: map-get($options, 'gap-column');
+  display: grid;
+  grid-row-gap: #{$gap-row};
+  grid-column-gap: #{$gap-column};
+
+  // Template
+  $child: map-get($options, 'child');
+  $column: map-get($options, 'column');
+  $template-columns: map-get($options, 'template-columns');
+  $template-rows: '';
+  @for $i from 1 through ceil($child / $column) {
+    $template-rows: $template-rows + auto + ' ';
+  }
+  grid-template: #{$template-rows} / #{$template-columns};
+
+  // Area
+  $element: map-get($options, 'element');
+  $row-area: 1;
+  $column-area: 1;
+  @for $i from 1 through $child {
+    #{$element}:nth-child(#{$i}) {
+      -ms-grid-row: $row-area;
+      -ms-grid-column: $column-area;
+      @if ($i % $column == 0) {
+        $row-area: $row-area + 1;
+        @if $gap-row != false {
+          $row-area: $row-area + 1;
+        }
+      }
+      @if $gap-column != false {
+        $column-area: $column-area + 1;
+        @if ($i % $column == 0) {
+          $column-area: 0;
+        }
+        $column-area: $column-area + 1;
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var o="javascriptを覚えよう",e=o.indexOf("javascript");console.log(e);var n=o.indexOf("覚えよう");console.log(n);var a=o.indexOf("a");console.log(a);var c=o.indexOf("HTML");console.log(c);var i=o.indexOf("J");console.log(i);var l=o.indexOf("javascript",4);console.log(l)});
+"use strict";document.addEventListener("DOMContentLoaded",function(){});

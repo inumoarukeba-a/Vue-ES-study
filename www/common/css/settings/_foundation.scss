@@ -166,7 +166,7 @@ html {
     font-size: vw(10);
   }
   @include mq-pc {
-    font-size: (625% * (strip-unit($pc-basis) / strip-unit($max-basis)));
+    font-size: (625% * (strip-unit($min-basis) / strip-unit($pc-basis)));
   }
   @include mq-min {
     font-size: 100vw / (strip-unit($pc-basis) / 100);
@@ -184,7 +184,7 @@ body {
     font-size: vw(strip-unit($base-font-size));
   }
   @include mq-pc {
-    font-size: responsive(strip-unit($base-font-size));
+    font-size: rem(strip-unit($base-font-size));
   }
 }
 

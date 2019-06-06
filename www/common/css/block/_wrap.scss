@@ -4,8 +4,8 @@
 −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−− */
 .wrap {
   @include mq-pc {
-    padding: responsive(40);
-    padding-bottom: responsive(100);
+    padding: rem(40);
+    padding-bottom: rem(100);
   }
   @include mq-sp {
     padding: 5vw;
@@ -22,8 +22,8 @@
     align-items: center;
     justify-content: center;
     @include mq-pc {
-      padding: responsive(10);
-      font-size: responsive(16);
+      padding: rem(10);
+      font-size: rem(16);
     }
     @include mq-sp {
       padding: vw(10);

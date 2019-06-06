@@ -10,11 +10,42 @@
     <link href="../common/css/common.css" rel="stylesheet" />
   </head>
   <body ontouchstart="">
-    <div id="app">
-      <button v-on:click="handleClick">カウントアップ</button>
-      <button v-on:click="show=!show">表示 / 非表示</button>
-      <span ref="count" v-if="show">0</span>
-    </div>
+    <main id="app">
+      <ul>
+        <li v-for="(tab, tabName) in tabs" :key="tabName">
+          <button
+            class="tab"
+            @click="setTabActive(tabName)"
+            :class="{'active': tabName === activeTab}"
+          >
+            <span class="tab-copy">{{ tabName }}</span>
+          </button>
+        </li>
+      </ul>
+      <div class="container">
+        <transition name="fade" mode="out-in" appear :duration="500">
+          <tab-content
+            v-for="(tabContent, t) in tabs"
+            :data="tabContent"
+            :key="'content'+t"
+            v-if="t === activeTab"
+            inline-template
+          >
+            <div class="content">
+              <h1>{{ data.title }}</h1>
+              <p>{{ data.body }}</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Nesciunt labore id sint voluptas assumenda optio ullam excepturi
+                officia, a commodi nobis rem saepe error iusto, minima ipsum
+                ducimus quos dignissimos itaque, temporibus esse impedit?
+                Veritatis repellat dolor magnam modi error!
+              </p>
+            </div>
+          </tab-content>
+        </transition>
+      </div>
+    </main>
 
     <script src="../js/library/pace/pace.min.js" defer></script>
     <script src="../js/library/lazysizes/lazysizes.min.js" defer></script>

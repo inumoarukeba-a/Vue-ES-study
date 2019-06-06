@@ -27,7 +27,7 @@
   @return #{round-decimal($rate * $value * 1, 2)}vw;
 }
 
-@function responsive($value) {
+@function rem($value) {
   @return #{$value / 100}rem;
 }
 

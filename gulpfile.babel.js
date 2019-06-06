@@ -23,9 +23,6 @@ import fs from 'fs'
 const settings = {
   ROOT: './www/',
   //PHP: '5.6.32',
-  autoprefixer: {
-    browsers: ['> 2%', 'last 2 version'],
-  },
 }
 
 const paths = {
@@ -60,7 +57,6 @@ export function styles() {
     )
     .pipe(
       autoprefixer({
-        browsers: settings.autoprefixer.browsers,
         cascade: false,
         grid: true,
       })
