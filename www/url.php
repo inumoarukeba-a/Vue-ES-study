@@ -25,7 +25,7 @@
     <link href="common/css/url.css" rel="stylesheet">
   </head>
   <body ontouchstart="">
-    <script src="js/url.es.js" defer></script>
+    <script src="js/url.js" defer></script>
     <img src="capture.png" alt="" style="width: 100%; height: auto;">
   </body>
 </html>
