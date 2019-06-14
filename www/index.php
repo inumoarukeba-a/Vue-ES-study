@@ -118,9 +118,9 @@
 
     </div>
 
-    <script src="js/library/pace/pace.min.js" defer></script>
-    <script src="js/library/lazysizes/lazysizes.min.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="common/javascript/library/pace/pace.min.js" defer></script>
+    <script src="common/javascript/library/lazysizes/lazysizes.min.js" defer></script>
+    <script src="common/javascript/script.js" defer></script>
 
   </body>
 </html>
