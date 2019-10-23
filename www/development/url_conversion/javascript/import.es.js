@@ -5,8 +5,8 @@
   /**
    * Options
    */
-  const HTTP = 'https://web-responsive-template.example.php72/'
-  const LOCAL_DOMAIN = 'example.php72'
+  const HTTP = '//web-responsive-template.example.mentai/'
+  const LOCAL_DOMAIN = 'example.test'
 
   /**
    * Stop Duplicate
@@ -21,6 +21,7 @@
    * Set File
    */
   const $FILE = ['Script', 'CSS', 'WebFont']
+  const FILE_LENGTH = $FILE.length
   const FRAGMENT = document.createDocumentFragment()
 
   // Core Script
@@ -41,24 +42,34 @@
   /**
    * Append
    */
-  for (let i = 0; i < $FILE.length; i++) {
+  for (let i = 0; i < FILE_LENGTH; i++) {
     FRAGMENT.appendChild($FILE[i])
   }
   document.body.appendChild(FRAGMENT)
 
   /**
+   * Load Complete
+   */
+  const loadComplete = () => {
+    counter++
+    // All File Load
+    if (counter === FILE_LENGTH) {
+      URLConversion(LOCAL_DOMAIN) // script.jsに記載
+    }
+  }
+
+  /**
    * Trigger
    */
   let counter = 0
-  for (let i = 0; i < $FILE.length; i++) {
+  const LISTENER_OPTION = { once: true }
+  for (let i = 0; i < FILE_LENGTH; i++) {
     ;(n => {
-      $FILE[n].addEventListener('load', () => {
-        counter++
-        // All File Load
-        if (counter == $FILE.length) {
-          URLConversion(LOCAL_DOMAIN) // script.jsに記載
-        }
-      })
+      if ($FILE[n].complete) {
+        loadComplete()
+        return
+      }
+      $FILE[n].addEventListener('load', loadComplete(), LISTENER_OPTION)
     })(i)
   }
 })()

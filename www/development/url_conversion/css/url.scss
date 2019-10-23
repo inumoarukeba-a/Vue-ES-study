@@ -3,6 +3,7 @@ $base-color: #24292e;
 $error-color: #e53333;
 $font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
+$duration: 0.34s;
 
 .urlConversion {
   *,
@@ -24,11 +25,19 @@ $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
   z-index: 99999;
   background: rgba($base-color, 0.95);
   padding: 24px 40px;
-  transition: transform 0.3s $easing 0s;
   transform: translateY(-138.2%);
   box-sizing: border-box;
   font-family: $font-family;
   &.-opened {
+    animation: frameIn $duration $easing 0s;
+  }
+}
+
+@keyframes frameIn {
+  0% {
+    transform: translateY(-138.2%);
+  }
+  100% {
     transform: translateY(0);
   }
 }
@@ -75,8 +84,8 @@ $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
     transform: translateY(-1px);
   }
   &:not(.-disabled) {
-    transition: background 0.3s $easing 0s, color 0.3s $easing 0s,
-      box-shadow 0.3s $easing 0s, transform 0.3s $easing 0s;
+    transition: background $duration $easing 0s, color $duration $easing 0s,
+      box-shadow $duration $easing 0s, transform $duration $easing 0s;
   }
   &.-disabled,
   &:not([href]) {
@@ -125,7 +134,7 @@ $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
   border-radius: 3px;
   padding: 12px 16px;
   width: 100%;
-  transition: border 0.3s $easing 0s;
+  transition: border $duration $easing 0s;
   box-sizing: border-box;
   position: relative;
   &:after {
@@ -135,7 +144,7 @@ $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
     font-size: 12px;
     line-height: 1;
     opacity: 0;
-    transition: opacity 0.3s $easing 0s;
+    transition: opacity $duration $easing 0s;
     color: #fff;
   }
   &.-focus {
@@ -163,7 +172,7 @@ $easing: cubic-bezier(0.47, 0, 0.745, 0.715);
   border-right: 1px solid #cfcfcf;
   font-family: $font-family;
   font-size: 12px;
-  transition: color 0.3s $easing 0s;
+  transition: color $duration $easing 0s;
   color: $key-color;
 }
 

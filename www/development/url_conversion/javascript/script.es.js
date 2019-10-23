@@ -18,9 +18,9 @@ const URLConversion = localDomain => {
   const NOW_HOST = location.host // www.n-e-u.com
   const NOW_PATH = location.pathname.replace('/', '') // sample.php
   const NOW_ID =
-    NOW_HOST.indexOf('example.') !== -1
-      ? NOW_HOST.replace(/www./, '').split('.')[0] // n-e-u
-      : NOW_HOST // www.n-e-u.com
+    NOW_HOST.indexOf('example.') === -1
+      ? NOW_HOST // www.n-e-u.com
+      : NOW_HOST.replace(/www./, '').split('.')[0] // n-e-u
 
   /**
    * Set UI
@@ -163,7 +163,10 @@ const URLConversion = localDomain => {
     if (COOKIE_ARRAY['url_id']) {
       $INPUT_TEXT.value = COOKIE_ARRAY['url_id']
       $INPUT_LABEL.classList.add('-cookie')
-      $INPUT_LABEL.setAttribute('data-text', 'Cookieを利用しました。')
+      $INPUT_LABEL.setAttribute(
+        'data-text',
+        'ヒットしなかった為、Cookieを利用しました。'
+      )
       getJson({
         fetchID: COOKIE_ARRAY['url_id'],
         firstFlag: false,
