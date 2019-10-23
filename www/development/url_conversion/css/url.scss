@@ -29,7 +29,7 @@ $duration: 0.34s;
   box-sizing: border-box;
   font-family: $font-family;
   &.-opened {
-    animation: frameIn $duration $easing 0s;
+    animation: frameIn $duration $easing 0s both;
   }
 }
 
