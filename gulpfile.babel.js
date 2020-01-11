@@ -131,7 +131,7 @@ const serve = () => {
     },
     () => {
       browserSync.init({
-        proxy: 'https://web-responsive-template.example.php72/',
+        proxy: 'https://Vue-ES-study.example.php72/',
         open: 'external',
         logSnippet: false,
         notify: false,
