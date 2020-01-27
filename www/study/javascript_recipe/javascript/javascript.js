@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){});
+"use strict";var _module=require("./module01.js"),_module2=_interopRequireDefault(require("./module02.js"));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var aaa=(new _module.Class01).MyMethod(),bbb=(new _module2.default).MyMethod();console.log(aaa),console.log(bbb);
