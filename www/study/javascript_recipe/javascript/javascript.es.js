@@ -1,9 +1,17 @@
 'use strict'
 
-class MyClass {
-  static method() {
-    return 'hoge'
+class MyParent {
+  method() {
+    console.log('親クラス')
   }
 }
 
-console.log(MyClass.method())
+class MyChild extends MyParent {
+  method02() {
+    console.log('子クラス')
+  }
+}
+
+const myChild = new MyChild()
+myChild.method()
+myChild.method02()
