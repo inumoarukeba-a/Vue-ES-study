@@ -1,17 +1,13 @@
 'use strict'
-
-class MyParent {
-  method() {
-    console.log('親クラス')
+class MyClass {
+  constructor() {
+    this.count = 0
+    const button = document.querySelector('#button')
+    const text = document.querySelector('#text')
+    button.addEventListener('click', () => {
+      this.count += 1
+      text.innerHTML = this.count
+    })
   }
 }
-
-class MyChild extends MyParent {
-  method02() {
-    console.log('子クラス')
-  }
-}
-
-const myChild = new MyChild()
-myChild.method()
-myChild.method02()
+new MyClass()
