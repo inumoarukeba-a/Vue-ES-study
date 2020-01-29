@@ -1,11 +1,16 @@
 'use strict'
 
-const promise = new Promise(resolve => {
-  setTimeout(() => {
+const flag = false
+const promise = new Promise((resolve, reject) => {
+  if (flag === true) {
     resolve('berry')
-  }, 1000)
+  } else {
+    reject('mekabu')
+  }
 })
-
-promise.then(value => {
-  console.log(value)
-})
+  .then(value => {
+    console.log(value)
+  })
+  .catch(value => {
+    console.log(value)
+  })

@@ -1,1 +1,1 @@
-"use strict";var promise=new Promise(function(e){setTimeout(function(){e("berry")},1e3)});promise.then(function(e){console.log(e)});
+"use strict";var flag=!1,promise=new Promise(function(o,n){!0===flag?o("berry"):n("mekabu")}).then(function(o){console.log(o)}).catch(function(o){console.log(o)});
