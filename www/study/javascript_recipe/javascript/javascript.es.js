@@ -1,17 +1,22 @@
 'use strict'
 
-const start = async () => {
-  await new Promise(resolve => {
+const listFunctions = []
+
+for (let i = 0; i < 5; i++) {
+  const func = resolve => {
     setTimeout(() => {
-      console.log('1', new Date().toLocaleTimeString())
+      console.log(i)
       resolve()
     }, 1000)
-  })
-  await new Promise(resolve => {
-    setTimeout(() => {
-      console.log('2', new Date().toLocaleTimeString())
-      resolve()
-    }, 1000)
-  })
+  }
+  listFunctions.push(func)
 }
-start()
+
+console.log(listFunctions)
+
+const execute = async resolve => {
+  for (let i = 0; i < listFunctions.length; i++) {
+    await new Promise(listFunctions[i])
+  }
+}
+execute()
