@@ -1,1 +1,1 @@
-"use strict";function _classCallCheck(t,n){if(!(t instanceof n))throw new TypeError("Cannot call a class as a function")}var MyClass=function t(){var n=this;_classCallCheck(this,t),this.count=0;var c=document.querySelector("#button"),e=document.querySelector("#text");c.addEventListener("click",function(){n.count+=1,e.innerHTML=n.count})};new MyClass;
+"use strict";var promise=new Promise(function(e){setTimeout(function(){e("berry")},1e3)});promise.then(function(e){console.log(e)});
