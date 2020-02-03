@@ -1,1 +1,1 @@
-"use strict";var a=0,b=a;a=100,console.log(b);var c=[1,2,3],d=c;c[0]=100,console.log(d);
+"use strict";var userList=[{id:1,name:"鈴木"},{id:2,name:"田中"},{id:3,name:"木村"}],searchUser=function(r){return userList.filter(function(e){return e.id===r})};console.log(searchUser(1)),console.log(searchUser(4));

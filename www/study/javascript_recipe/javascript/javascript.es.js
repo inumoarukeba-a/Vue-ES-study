@@ -1,13 +1,15 @@
 'use strict'
 
-let a = 0
-let b = a
-a = 100
+const userList = [
+  { id: 1, name: '鈴木' },
+  { id: 2, name: '田中' },
+  { id: 3, name: '木村' },
+]
 
-console.log(b)
+const searchUser = value => {
+  const targetUser = userList.filter(user => user.id === value)
+  return targetUser
+}
 
-let c = [1, 2, 3]
-let d = c
-c[0] = 100
-
-console.log(d)
+console.log(searchUser(1))
+console.log(searchUser(4))
