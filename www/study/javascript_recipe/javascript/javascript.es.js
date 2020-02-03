@@ -1,6 +1,13 @@
 'use strict'
 
-const myArray = [1, 2, 3]
-myArray[0] = 100
+let a = 0
+let b = a
+a = 100
 
-console.log(myArray)
+console.log(b)
+
+let c = [1, 2, 3]
+let d = c
+c[0] = 100
+
+console.log(d)

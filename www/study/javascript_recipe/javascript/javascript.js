@@ -1,1 +1,1 @@
-"use strict";var myArray=[1,2,3];myArray[0]=100,console.log(myArray);
+"use strict";var a=0,b=a;a=100,console.log(b);var c=[1,2,3],d=c;c[0]=100,console.log(d);
